@@ -1,0 +1,345 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #141414;
+    color: #f0f0f0;
+}
+
+a {
+    text-decoration: none;
+    color: #f0f0f0;
+}
+
+/* =====================================================
+   1. HEADER (Mobile First -> Tablet -> Desktop)
+   ===================================================== */
+.main-header {
+    background-color: #0d0d0d;
+    border-bottom: 1px solid #d4af37;
+    padding: 15px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo-box {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+}
+
+.brand-name {
+    font-size: 20px;
+    font-weight: bold;
+    color: #d4af37;
+    letter-spacing: 3px;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav-link:hover {
+    color: #d4af37;
+}
+
+/* =====================================================
+   2. ANIMATED BANNER - PLD SPACE STYLE (Section 1)
+   ===================================================== */
+.hero-section {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    overflow: hidden;
+}
+
+.hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.35;
+    z-index: -1;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    animation: fade-up 1.5s ease-out;
+}
+
+/* Simple CSS Animation for the banner */
+@keyframes fade-up {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero-title {
+    font-size: 32px;
+    letter-spacing: 4px;
+    color: #d4af37;
+}
+
+.gold-button {
+    border: 1px solid #d4af37;
+    color: #d4af37;
+    padding: 12px 25px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.gold-button:hover {
+    background-color: #d4af37;
+    color: #141414;
+}
+
+/* =====================================================
+   3. COMMON SECTIONS & 10-IMAGE GALLERY
+   ===================================================== */
+.page-section {
+    min-height: 100vh;
+    padding: 60px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid #262626;
+}
+
+.section-title {
+    color: #d4af37;
+    letter-spacing: 2px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.gallery-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    max-width: 1100px;
+}
+
+.watch-card {
+    background-color: #1f1f1f;
+    border: 1px solid #333333;
+    padding: 15px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+/* Mandatory Hover Effect */
+.watch-card:hover {
+    border-color: #d4af37;
+    transform: scale(1.04);
+}
+
+.watch-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.watch-name {
+    margin-top: 12px;
+    font-size: 16px;
+    color: #d4af37;
+}
+
+/* =====================================================
+   4. SPECS TABLE & CARE LISTS (Sections 2 and 3)
+   ===================================================== */
+.workshop-section {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    overflow: hidden;
+}
+
+.workshop-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.35;
+    z-index: -1;
+}
+
+.workshop-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    animation: fade-up 1.5s ease-out;
+}
+
+/* Simple CSS Animation for the banner */
+@keyframes fade-up {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+   .specs-container,
+.care-container {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    width: 100%;
+    max-width: 900px;
+}
+
+.table-box,
+.info-aside,
+.list-box {
+    background-color: #1f1f1f;
+    border: 1px solid #333333;
+    padding: 25px;
+    flex: 1;
+}
+
+.box-subtitle {
+    color: #d4af37;
+    margin-bottom: 15px;
+}
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.data-table th,
+.data-table td {
+    border: 1px solid #444444;
+    padding: 10px;
+    text-align: left;
+}
+
+.data-table th {
+    background-color: #d4af37;
+    color: #141414;
+}
+
+.simple-list {
+    padding-left: 20px;
+    line-height: 2;
+}
+
+/* =====================================================
+   5. FOOTER
+   ===================================================== */
+.main-footer {
+    background-color: #0d0d0d;
+    border-top: 1px solid #d4af37;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    text-align: center;
+}
+
+.footer-link {
+    color: #d4af37;
+    text-decoration: underline;
+}
+
+.social-icon {
+    font-size: 20px;
+    margin: 0 10px;
+    color: #d4af37;
+}
+
+/* =====================================================
+   6. MEDIA QUERIES (Tablet: 768px | Desktop: 1024px)
+   ===================================================== */
+
+/* Device Size 2: TABLET */
+@media (min-width: 768px) {
+    .nav-list {
+        flex-direction: row;
+        gap: 25px;
+    }
+
+    .gallery-container {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .watch-card {
+        width: 45%;
+    }
+
+    .care-container {
+        flex-direction: row;
+    }
+
+    .main-footer {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+}
+
+/* Device Size 3: DESKTOP */
+@media (min-width: 1024px) {
+    .main-header {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 15px 50px;
+    }
+
+    .hero-title {
+        font-size: 48px;
+    }
+
+    .watch-card {
+        width: 18%;
+    }
+
+    .specs-container {
+        flex-direction: row;
+    }
+}
